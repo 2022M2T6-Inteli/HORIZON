@@ -196,10 +196,10 @@ app.get("/deleteObras", urlencodedParser, (req, res) => { //Deleta uma obra do b
     db.close(); // Fecha o banco
 });
 
-
+// INNER JOIN
 app.get('/loginEmpreiteiro', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
-	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+	res.setHeader('Access-Control-Allow-Origin', '*'); 
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	console.log(req.body)
 	var sql = `SELECT Empreiteiro.nome_empreiteiro, Login.email, Login.senha, Login.cod_login FROM Login INNER JOIN Empreiteiro ON Login.cod_login = Empreiteiro.cod_empreiteiro`;
