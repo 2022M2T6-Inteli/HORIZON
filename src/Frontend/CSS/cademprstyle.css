@@ -81,7 +81,7 @@ body{
   margin-top: 10px;
   }
 
-  .btn-login{
+  a .btn-login{
     /* Seta as propriedades do botao de login*/
     margin-top: 20px;
     width: 100%;
@@ -93,6 +93,7 @@ body{
     outline: none;
     text-transform: uppercase;
     font-weight: 800;
+    justify-content: center;
     /* Outro fator que fez eu criar um css para cada html foi o espaçamento aqui*/
     letter-spacing: 1px;
     box-shadow: 0px 10px 40px -12px #04844b;

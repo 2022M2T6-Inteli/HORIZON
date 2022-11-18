@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados</title>
+    <link rel="stylesheet" href="../CSS/estilo.css">
+    <link rel="stylesheet" href="../CSS/navbar.css">
+    <script src="https://kit.fontawesome.com/f5b8112d40.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkBtn">
+            <img src="../IMG/barramenu.png" width="55px" height="55px">
+        </label>
+        <a href="../HTML/index.html"><label class="logo"><img src="../IMG/logomrvhud.png" width="135px" height="65px" alt="Logo Mrv"></label></a>
+        <ul>
+            <li><a href="../HTML/pagina.html">Dados da Empresa</a></li>
+            <li><a href="../HTML/contratos.html">Contratos</a></li>
+            <li><a href="../HTML/Funcionarios.html">Funcionários</a></li>
+            <li><a href="../HTML/Chamados.html">Chamados</a></li>
+            <li><a href="../HTML/perfil.html">Perfil</a></li>
+
+        </ul>
+    </nav>
+
+    <div class="container dados">
+
+        <h3>DADOS DA EMPRESA</h3>
+        <button id="btn_solic_corr">Solicitar Correção </button>
+
+        <div class="infosdados">
+
+            <div class="inputsdados">
+
+                <label for="razaosocial">Razão Social</label>
+                <input type="text" name="razaosocial" class="estiloinputdados">
+
+                <label for="nomefant">Nome Fantasia</label>
+                <input type="text" name="nomefant" class="estiloinputdados">
+
+                <label for="cnpj">CNPJ</label>
+                <input type="number" name="cnpj" class="estiloinputdados" placeholder="10 Digitos">
+
+                <label for="endcorp">Endereço Corporativo</label>
+                <input type="text" name="endcorp" class="estiloinputdados">
+
+                <label for="telefone">Telefone de contato</label>
+                <input type="text" name="telefone" placeholder="(DDD)+ 9 Digitos" class="estiloinputdados">
+
+                <label for="email">Email de contato</label>
+                <input type="text" name="email" placeholder="emaildaempresa@gmail.com" class="estiloinputdados">
+
+            </div>
+
+
+            <h4 class="subtitulosocios">Sócios da empresa</h4>
+            <div class="hudsocios">
+                <p>Nome do sócio</p>
+                <p>CPF do sócio</p>
+                <p>Tel. do sócio</p>
+                <p>Email do sócio</p>
+            </div>
+            <div class="dadossocios">
+                <p class="resp">AAA</p>
+                <p class="resp">bbb</p>
+                <p class="resp">ccc</p>
+                <p class="resp">dddd</p>
+            </div>
+
+
+            <h4 class="subtitulosocios">Dados do contatos</h4>
+            <div class="hudsocios">
+                <p>Nome do contador</p>
+                <p>CNPJ</p>
+                <p>Telefone</p>
+                <p>Email</p>
+            </div>
+
+
+        </div>
+
+        
+
+
+    </div>
+</body>
+</html>

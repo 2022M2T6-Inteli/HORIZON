@@ -1,3 +1,12 @@
+@font-face {
+  font-family: fontepadrao;
+  src: url(../Fontes/Fontes/Primária/Averta.woff);
+}
+
+* {
+  font-family: fontepadrao;
+}
+
 body, html{
   /*Tira as margens de todo body*/
   margin: 0;
@@ -79,9 +88,9 @@ margin-bottom: 10px;
 margin-top: 10px;
 }
 
-.btn-login{
+a .btn-login{
    /* Seta as propriedades do botao de login (avançar)*/
-  width: 100%;
+  width: 150%;
   padding: 16px 0px;
   margin: 15px;
   border: none;
@@ -96,12 +105,13 @@ margin-top: 10px;
   cursor:pointer;
   /*Para setar as coisas para o Hover*/
   display: inline-block;
+  justify-content: center;
   transform: perspective(1px) translateZ(0);
   position: relative;
   transition: color 0.3s; 
 }
 /*seta um pseudo elemento para realizar o hover*/
-.btn-login:before {
+a .btn-login:before {
   /*seta as propriedades do hover*/
   content: "";
   position: absolute;

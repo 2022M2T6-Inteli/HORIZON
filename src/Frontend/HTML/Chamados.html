@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/Chamados.css">
+    <script src="https://kit.fontawesome.com/f5b8112d40.js" crossorigin="anonymous"></script>
+    <script src="../JS/chamadosMobile.js"></script>
+</head>
+<body>
+    <nav>
+        <!-- Icone que compacta as operações de navegação.  -->
+        <input type="checkbox" id="check">
+        <label for="check" class="checkBtn">
+            <img src="../IMG/barramenu.png" width="50px" height="50px">
+        </label>
+        <!-- Imagem contendo o logo da MRV.  -->
+        <a href="../HTML/index.html"><label class="logo"><img src="../IMG/logomrvhud.png" width="135px" height="65px" alt="Logo Mrv"></label></a>
+        <ul>
+            <!-- Listas de opções do menu.  -->
+            <li><a class="" href="../HTML/pagina.html">Dados da Empresa</a></li>
+            <li><a href="../HTML/contratos.html">Contratos</a></li>
+            <li><a href="../HTML/Funcionarios.html">Funcionários</a></li>
+            <li><a href="../HTML/Chamados.html">Chamados</a></li>
+            <li><a href="../HTML/perfil.html">Perfil</a></li>
+        </ul>
+    </nav>
+    <!-- Tabela  -->
+    <section class="grid">
+        <div class="table">
+            <!-- Header da Tabela.  -->
+            <div class="texto">
+                <img src="../IMG/file_verde-removebg-preview.png" width="55px" height="50px" alt="Chamados" class="file">
+                <h3 class="titulo">Acompanhar Chamado</h3>
+                <a href="../HTML/novoChamado.html"><button type="button" class="link" id="acompanhar" name="acompanhar">Novo Chamado</button></a>
+            </div>
+            <hr class="espaco">
+            <!-- Body da Tabela.  -->
+            <div class="table-responsive-lg">
+                <table class="table table-bordered">
+                    <thead>
+                            <!-- Colunas da Tabela.  -->
+                            <tr class="table-active">
+                            <th scope="col">Número</th>
+                            <th scope="col">Aberto</th>
+                            <th scope="col">Título de chamado</th>
+                            <th scope="col">Descriçao Resumida</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Linhas da Tabela.  -->
+                    <tr style="height: auto">
+                        <th scope="row">1</th>
+                        <td>20/10/2022 21:47</td>
+                        <td>Crachá</td>
+                        <td>Crachá - Solicitaçao de 2 Via</td>
+                        <td>Aberto</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>20/10/2022 22:31</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Aberto</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>20/10/2022 22:31</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Aberto</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">4</th>
+                        <td>20/10/2022 22:31</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Aberto</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">5</th>
+                        <td>20/10/2022 22:31</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Aberto</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">6</th>
+                        <td>20/10/2022 22:31</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Aberto</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">7</th>
+                        <td>20/10/2022 22:31</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Teste de abertura de chamado</td>
+                        <td>Aberto</td>
+                    </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
