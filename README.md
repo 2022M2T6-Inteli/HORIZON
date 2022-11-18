@@ -9,13 +9,13 @@
 ## Nome do grupo
 
 ## Integrantes: 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 1</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 2</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 3</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 4</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 5</a>
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 6</a> 
-- <a href="https://www.linkedin.com/in/victorbarq/">Nome do integrante 7</a>
+- <a href="https://www.linkedin.com/in/arthur-tsukamoto/">Arthur Tsukamoto</a>
+- <a href="https://www.linkedin.com/in/estherhikari/">Esther Hikari Nunes</a>
+- <a href="https://www.linkedin.com/in/felipe-zillo-72b367247/overlay/photo/">Felipe Zillo</a> 
+- <a href="https://www.linkedin.com/in/jos%C3%A9-vitor-marcelino-4165ba24a/">Vitor Marcelino</a> 
+- <a href="https://www.linkedin.com/in/luis-miranda-137566139/">Luis Miranda</a>
+- <a href="https://www.linkedin.com/in/marcelo-saadi-pessini-003212209/">Marcelo Saadi Pessini</a> 
+- <a href="https://www.linkedin.com/in/mariana-g%C3%B6rresen-b03059210/">Mariana Brasil Görresen</a>
 
 ## 📝 Descrição
 
@@ -93,18 +93,14 @@ deve possuir o valor "node app.js".
 
 ## 🗃 Histórico de lançamentos
 
-* 0.2.1 - 25/01/2022
-    * Atualização de documentos (código do módulo permanece inalterado).
-* 0.2.0 - 15/01/2022
-    * Remove `setDefaultXYZ()`
-    * Adiciona `init()`
-* 0.1.1 - 11/01/2022
-    * Crash quando chama `baz()`
-* 0.1.0 - 10/01/2022
-    * O primeiro lançamento adequado
-    * Renomeia `foo()` para `bar()`
-* 0.0.1 - 01/01/2022
-    * Trabalho em andamento
+* 0.1.1 - 18/11/2022
+    * Trabalho em andamento - Artefato 3
+    * Entrega do Frontend
+* 0.1.0 - 03/11/2022
+    * Trabalho em andamento - Artefato 2
+    * Entrega do backend
+* 0.0.1 - 20/10/2022
+    * Trabalho em andamento - Artefato 1
 
 ## 📋 Licença/License
 
