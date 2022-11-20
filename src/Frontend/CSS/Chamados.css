@@ -63,7 +63,7 @@
     justify-content: flex-end;
 }
 
-
+/*Seletor universal de todos os elementos do HTML*/
 * {
     padding: 0;
     margin: 0;
@@ -73,16 +73,20 @@
     font-family: fontepadrao;
 }
 
+/*Definição dos atributos no corpo da página*/
 body {
     font-family: montserrat;
 }
 
+/*BARRA DE NAVEGAÇÃO*/
+/*altura, largura e cor de fundo definidas*/
 nav {
     background-color: #04844b;
     height: 80px;
     width: 100%;
 }
 
+/*altura, largura e margens do logo definidas*/
 label.logo {
     height: 35px;
     width: 45px;
@@ -96,17 +100,20 @@ header {
     height: 80px;
 }
 
+/*especificações da tag <ul> na barra de navegação*/
 nav ul {
     float: right;
     margin-right: 20px;
 }
 
+/*especificações da tag <li> dentro de <ul> na barra de navegação*/
 nav ul li{
     display: inline-block;
     line-height: 80px;
     margin: 0 5px
 }
 
+/*especificações da tag <a> dentro de <li> e <ul> na barra de navegação*/
 nav ul li a{
     text-decoration: none;
     color: white;
@@ -118,14 +125,15 @@ nav ul li a{
     align-items: center;
 }
 
-
+/***********************/
+/*definição da cor do link da tag <a> quando o mouse passar por cima*/
 a.active,a:hover{
     color: #ffa500;
     text-decoration: none;
     transition: 0.5s;
 }
 
-
+/*Definição do tamanho, borda e centralização de imagem*/
 .imagemRedonda {
     height: 55px;
     width: 55px;
@@ -135,7 +143,7 @@ a.active,a:hover{
     align-items: center;
 }
 
-
+/*Botão de sidebar*/
 .checkBtn{
     font-size: 30px;
     color: white;
@@ -150,6 +158,7 @@ a.active,a:hover{
     display: none;
 }
 
+/*Atributos modificados, especificos para telas de até 952px*/
 @media screen and (max-width: 952px) {
     label.logo {
         padding-left: 50px;
@@ -162,6 +171,7 @@ a.active,a:hover{
 
 }
 
+/*Atributos modificados, especificos para telas de até 858px*/
 @media screen and (max-width: 858px) {
     .checkBtn {
         display: block;
@@ -205,6 +215,7 @@ a.active,a:hover{
 
 }
 
+/*Atributos modificados, especificos para telas de até 600px*/
 @media screen and (max-width: 600px) {
     .checkBtn {
         display: block;
@@ -284,6 +295,7 @@ a.active,a:hover{
     }
 }
 
+/*Atributos modificados, especificos para telas de até 400px*/
 @media screen and (max-width: 400px) {
     .checkBtn {
         display: block;
