@@ -19,6 +19,97 @@ app.use(express.json());
 //get, post, put, delete methods
 /*
 ========================================================================================
+//                  Endpoints relacionados à tabela Chamados                          //
+//                                COMPLETO                                            //
+========================================================================================
+*/
+//READ
+app.get("/readChamado", (req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+    var db = new sqlite3.Database(DBSOURCE); // Abre o banco
+    var sql = 'SELECT * FROM Chamados ORDER BY titulo COLLATE NOCASE';
+    db.all(sql, [], (err, rows) => {
+        if (err) {
+            throw err;
+        }
+        res.json(rows);
+    });
+    db.close(); // Fecha o banco
+});
+
+//CREATE
+app.post('/registrarChamado', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); 
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	sql = "INSERT INTO Chamados (data, status, descricao, titulo) VALUES ('" + req.body.data + "', '" + req.body.status + "', '" + req.body.descricao + "', '" + req.body.titulo + "')";
+	console.log(sql);
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}	
+	});
+	res.write('<p>CHAMADO INSERIDO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	db.close(); // Fecha o banco
+	res.end();
+});
+
+// UPDATE
+app.get('/atualizaChamado', (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); 
+	sql = "SELECT * FROM Chamados WHERE cod_chamados="+ req.query.cod_chamados;
+	console.log(sql);
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.all(sql, [],  (err, rows ) => {
+		if (err) {
+			throw err;
+		}
+		res.json(rows);
+	});
+	db.close(); // Fecha o banco
+});
+
+// UPDATE
+app.post('/atualizaChamado', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); 
+	sql = "UPDATE Chamados SET data='" + req.body.data + "', status = '" + req.body.status + "' , descricao='" + req.body.descricao + "' , titulo='" + req.body.titulo + "' WHERE cod_chamados='" + req.body.cod_chamados +  "'";
+	console.log(sql);
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.end();
+	});
+	res.write('<p>CHAMADO ATUALIZADO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	db.close(); // Fecha o banco
+});
+
+//DELETE
+app.post("/deleteChamado", urlencodedParser, (req, res) => { //Deleta uma obra do banco de dados
+    res.statusCode = 200;
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
+    sql = "DELETE FROM Comunicacao WHERE cod_chamados='" + req.body.cod_chamados + "'";
+    console.log(sql);
+    var db = new sqlite3.Database(DBSOURCE); // Abre o banco
+    db.run(sql, [], err => {
+        if (err) {
+            throw err;
+        }
+        res.write('<p>CHAMADO DELETADO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+        res.end();
+    });
+    db.close(); // Fecha o banco
+});
+
+
+/*
+========================================================================================
 //                  Endpoints relacionados à tabela Comunicacao                       //
 //                                COMPLETO                                            //
 ========================================================================================
@@ -106,6 +197,97 @@ app.post("/deleteComunicacao", urlencodedParser, (req, res) => { //Deleta uma ob
     });
     db.close(); // Fecha o banco
 });
+
+/*
+========================================================================================
+//                  Endpoints relacionados à tabela Contratos                         //
+//                                COMPLETO                                            //
+========================================================================================
+*/
+//READ
+app.get("/readContrato", (req, res) => {
+    res.statusCode = 200;
+    res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
+
+    var db = new sqlite3.Database(DBSOURCE); // Abre o banco
+    var sql = 'SELECT * FROM Contratos ORDER BY status COLLATE NOCASE';
+    db.all(sql, [], (err, rows) => {
+        if (err) {
+            throw err;
+        }
+        res.json(rows);
+    });
+    db.close(); // Fecha o banco
+});
+
+//CREATE
+app.post('/registrarContrato', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); 
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	sql = "INSERT INTO Contratos (data, status) VALUES ('" + req.body.data + "', '" + req.body.status + "')";
+	console.log(sql);
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}	
+	});
+	res.write('<p>CONTRATO INSERIDO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	db.close(); // Fecha o banco
+	res.end();
+});
+
+// UPDATE
+app.get('/atualizaContrato', (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); 
+	sql = "SELECT * FROM Contrato WHERE cod_contratos="+ req.query.cod_contratos;
+	console.log(sql);
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.all(sql, [],  (err, rows ) => {
+		if (err) {
+			throw err;
+		}
+		res.json(rows);
+	});
+	db.close(); // Fecha o banco
+});
+
+// UPDATE
+app.post('/atualizaContrato', urlencodedParser, (req, res) => {
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*'); 
+	sql = "UPDATE Contratos SET data='" + req.body.data + "', status='" + req.body.status + "' WHERE cod_contratos='" + req.body.cod_contratos +  "'";
+	console.log(sql);
+	var db = new sqlite3.Database(DBPATH); // Abre o banco
+	db.run(sql, [],  err => {
+		if (err) {
+		    throw err;
+		}
+		res.end();
+	});
+	res.write('<p>CONTRATO ATUALIZADO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	db.close(); // Fecha o banco
+});
+
+//DELETE
+app.post("/deleteContrato", urlencodedParser, (req, res) => { //Deleta uma obra do banco de dados
+    res.statusCode = 200;
+    res.setHeader('Access-Control-Allow-Origin', '*');
+
+    sql = "DELETE FROM Contratos WHERE cod_contratos='" + req.body.cod_contratos + "'";
+    console.log(sql);
+    var db = new sqlite3.Database(DBSOURCE); // Abre o banco
+    db.run(sql, [], err => {
+        if (err) {
+            throw err;
+        }
+        res.write('<p>CONTRATO DELETADO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+        res.end();
+    });
+    db.close(); // Fecha o banco
+});
+
 
 /*
 ========================================================================================
