@@ -7,7 +7,7 @@ const DBPATH = "Teste1.db"
 const DBSOURCE = "Teste1.db"
 
 const hostname = '127.0.0.1';// endereço
-const port = 3001;// porta do site
+const port = 3002;// porta do site
 const app = express();// app faz o manuseio do express
 
 app.use("/public", express.static(path.join(__dirname, "../Frontend"), {
