@@ -5,9 +5,12 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 const sqlite3 = require('sqlite3').verbose();
 const DBPATH = "Teste1.db"
 const DBSOURCE = "Teste1.db"
+var horario = new Date
+var data = horario.getHours()
+var status 
 
 const hostname = '127.0.0.1';// endereço
-const port = 3002;// porta do site
+const port = 3011;// porta do site
 const app = express();// app faz o manuseio do express
 
 app.use("/public", express.static(path.join(__dirname, "../Frontend"), {
@@ -35,7 +38,7 @@ app.get("/readChamado", (req, res) => {
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
 
 	var db = new sqlite3.Database(DBSOURCE); // Abre o banco
-	var sql = 'SELECT * FROM Chamados ORDER BY titulo COLLATE NOCASE';
+	var sql = 'SELECT * FROM Chamados ORDER BY cod_chamados COLLATE NOCASE';
 	db.all(sql, [], (err, rows) => {
 		if (err) {
 			throw err;
@@ -50,7 +53,7 @@ app.post('/registrarChamado', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-	sql = "INSERT INTO Chamados (data, status, descricao, titulo) VALUES ('" + req.body.data + "', '" + req.body.status + "', '" + req.body.descricao + "', '" + req.body.titulo + "')";
+	sql = "INSERT INTO Chamados (data, status, descricao, titulo) VALUES ('" + data + "', '" + status + "', '" + req.body.descricao + "', '" + req.body.titulo + "')";
 	console.log(sql);
 	db.run(sql, [], err => {
 		if (err) {

@@ -35,23 +35,27 @@
 
             <div class="inputsdados">
 
-                <label for="razaosocial">Razão Social</label>
-                <input type="text" name="razaosocial" class="estiloinputdados">
+                <form name="formdadosempresa" action="/" method="post">
 
-                <label for="nomefant">Nome Fantasia</label>
-                <input type="text" name="nomefant" class="estiloinputdados">
+                <label for="razaoSocial">Razão Social</label>
+                <input type="text" name="razaoSocial" class="estiloinputdados" disabled>
+
+                <label for="nomeFantasia">Nome Fantasia</label>
+                <input type="text" name="nomeFantasia" class="estiloinputdados" disabled>
 
                 <label for="cnpj">CNPJ</label>
-                <input type="number" name="cnpj" class="estiloinputdados" placeholder="10 Digitos">
+                <input type="number" name="cnpj" class="estiloinputdados" placeholder="10 Digitos" disabled>
 
-                <label for="endcorp">Endereço Corporativo</label>
-                <input type="text" name="endcorp" class="estiloinputdados">
+                <label for="rua">Endereço Corporativo</label>
+                <input type="text" name="rua" class="estiloinputdados" value="rgrg" disabled>
 
                 <label for="telefone">Telefone de contato</label>
-                <input type="text" name="telefone" placeholder="(DDD)+ 9 Digitos" class="estiloinputdados">
+                <input type="text" name="telefone" placeholder="(DDD)+ 9 Digitos" class="estiloinputdados" disabled>
 
                 <label for="email">Email de contato</label>
-                <input type="text" name="email" placeholder="emaildaempresa@gmail.com" class="estiloinputdados">
+                <input type="text" name="email" placeholder="emaildaempresa@gmail.com" class="estiloinputdados" disabled>
+
+                
 
             </div>
 

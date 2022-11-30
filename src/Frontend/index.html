@@ -89,24 +89,22 @@
                     <div class="linha-grande"></div>
                 </div>
                 <div id="obras">
-                    
                 </div>
             </div><!--Fim principal-->
         </div> <!--Fim do conteudo-->
         <script>
             const urlObras = "/readidObras";
             const divObras = document.getElementById("obras");
-            let obras;
-            let saida;
 
             fetch(urlObras)
                 .then((response) => {
                     return response.json();
                 })
                 .then((data) => {
-                    obras = data;
+                    let saida = '';
+                    let obras = data;
                     obras.map(function(obras){
-                        saida += '<article><section class="imagem"><img src="Frontend/IMG/predio1.jfif"></section><section class="informacoes"><h5>' + `${obras.nome_obra}` + '</h5><p>' + `${obras.descricao}` + '</p></section><br><section id="rodape-artigo">' + `${obras.localizacao}` + ' | ' + `${obras.tamanho}` + ' m<sup>2</sup></section></article>'
+                        saida += '<article><section class="imagem"><img src="/public/IMG/predio1.jfif"></section><section class="informacoes"><h5>' + `${obras.nome_obra}` + '</h5><p>' + `${obras.descricao}` + '</p></section><br><section id="rodape-artigo">' + `${obras.localizacao}` + ' | ' + `${obras.tamanho}` + ' m<sup>2</sup></section></article>'
                     });
                     divObras.innerHTML = saida;
                 })
