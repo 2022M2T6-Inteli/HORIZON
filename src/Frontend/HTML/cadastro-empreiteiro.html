@@ -56,12 +56,12 @@
             //usa o ajax
             $.ajax({
                 type: "POST", 
-                url: hostname + "/meuendpoint",
+                url: hostname + "/registrarEmpreiteiro",
                 data: {
-                    cod_cnpj: cnpj,
-                    cod_email: email,
-                    cod_telefone: telefone,
-                    cod_senha: senha
+                    cnpj: cnpj,
+                    email: email,
+                    telefone: telefone,
+                    senha: senha
 
                 },
                 }).done(function(){
