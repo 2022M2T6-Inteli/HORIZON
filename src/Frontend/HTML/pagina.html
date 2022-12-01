@@ -4,9 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="../CSS/Chamados.css">
     <title>Dados</title>
     <link rel="stylesheet" href="../CSS/estilo.css">
-    <link rel="stylesheet" href="../CSS/navbar.css">
     <script src="https://kit.fontawesome.com/f5b8112d40.js" crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
@@ -14,14 +15,13 @@
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkBtn">
-            <img src="../IMG/barramenu.png" width="55px" height="55px">
+            <img src="../IMG/barramenu.png" width="50px" height="50px">
         </label>
-        <a href="/public"><label class="logo"><img src="../IMG/logoMRV_nova.png" width="162px" height="70px" alt="Logo Mrv"></label></a>
+        <a href="/public/HTML/paginaObras.html"><label class="logo"><img src="../IMG/logoMRV_nova.png" width="162px" height="70px" alt="Logo Mrv"></label></a>
         <ul>
             <li><a class="" href="../HTML/pagina.html">Dados da Empresa</a></li>
-            <li><a href="../HTML/contratos.html">Contratos</a></li>
+            <li><a href="../HTML/empreiteiraContrato.html">Contratos</a></li>
             <li><a href="../HTML/Chamados.html">Chamados</a></li>
-            <li><a href="../HTML/historicoObras.html">Obras</a></li>
             <li><a href="../HTML/perfil.html">Perfil</a></li>
 
         </ul>
@@ -29,8 +29,8 @@
 
     <div class="container dados">
 
-        <h3>DADOS DA EMPRESA</h3>
-        <button id="btn_solic_corr" > <a href="atualizaDadosempresa.html">ALTERAR</a> </button>
+        <h3>Dados da Empresa</h3>
+        <a href="../HTML/atualizaDadosempresa.html"><button type="button" class="link" id="acompanhar" name="acompanhar">Alterar</button></a>
 
         <div class="infosdados">
 
@@ -45,7 +45,7 @@
                 <input type="text" name="nomeFantasia" class="estiloinputdados" disabled>
                 <br/>
                 <label for="cnpj">CNPJ</label>
-                <input type="number" name="cnpj" class="estiloinputdados" placeholder="10 Digitos" value="3" disabled>
+                <input type="number" name="cnpj" class="estiloinputdados" placeholder="10 Digitos" value="" disabled>
                 <br/>
 
                 </form>

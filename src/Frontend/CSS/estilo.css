@@ -10,7 +10,19 @@
     font-family: fontepadrao;
     src: url(../Fontes/Fontes/Primária/Averta.woff);
 }
+.texto .link {
+    background-color: #04844b;
+    color: white;
+    justify-content: flex-end;
+    height: 8vh;
+}
 
+.link {
+    padding: 7px;
+    height: 7vh;
+    color: white;
+    justify-content: flex-end;
+}
 
 a:hover{
     color: orange ;
@@ -22,6 +34,17 @@ a:hover{
     width: 100%;
 
 }
+
+a {
+    color: white;
+    font-size: 13px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    }
 
 .hud {
     display: flex;

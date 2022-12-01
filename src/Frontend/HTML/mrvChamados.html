@@ -22,11 +22,9 @@
         <a href="/public"><label class="logo"><img src="../IMG/logoMRV_nova.png" width="162px" height="70px" alt="Logo Mrv"></label></a>
         <ul>
             <!-- Listas de opções do menu.  -->
-            <li><a class="" href="../HTML/pagina.html">Dados da Empresa</a></li>
             <li><a href="../HTML/contratos.html">Contratos</a></li>
-            <li><a href="../HTML/Chamados.html">Chamados</a></li>
+            <li><a href="../HTML/mrvChamados.html">Chamados</a></li>
             <li><a href="../HTML/historicoObras.html">Obras</a></li>
-            <li><a href="../HTML/perfil.html">Perfil</a></li>
         </ul>
     </nav>
     <!-- Tabela  -->
@@ -127,7 +125,7 @@
         $(document).ready(() => {
             users.list();
         });
-
+        let contador = 0;
         // objeto que faz o get
         var users = {
 
@@ -138,8 +136,9 @@
                     success: data => {
                         var tr = '';
                         data.forEach(element => {
+                            contador += 1;
                             tr += `<tr>`;
-                            tr += `<th scope="row"> ${element.cod_chamados} </th>`;
+                            tr += `<th scope="row"> ${contador} </th>`;
                             tr += `<th scope="row"> ${element.data} </th>`;
                             tr += `<td scope="row"> ${element.titulo} </td>`
                             tr += `<td scope="row"> ${element.descricao} </td>`
