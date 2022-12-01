@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Pega como referencia o css para estilizar o html-->
+    <link rel = "stylesheet" href="../CSS/cademprstyle.css">
+    <title>Cadastro</title>
+</head>
+<body>
+    <nav>
+        <label class="logo"><img src="../IMG/logomrvhud.png" width="150px" height="80px" alt="Logo Mrv"></label>
+    </nav>
+    <!--Cria a classe principal-->
+<div class="main-login">
+    <div class="right-login">
+        <div class="card-login">
+            <h1>Cadastro</h1>
+            <br>
+            <!--Cria a classe para inserir o CNPJ ou CPF para cadastro-->
+            <div class="textfield">
+                <label for="usuario">&nbsp CNPJ/CPF:</label>
+                <input type = "number" id = "cnpj"name = "usuario" placeholder="Digite seu CNPJ/CPF">
+            </div>
+            <div class="textfield">
+                <label for="email">&nbsp E-mail:</label>
+                <input type = "text" id = "email" name = "email" placeholder="Digite seu E-mail">
+            </div>
+            <div class="textfield">
+                <label for="telefone">&nbsp Telefone:</label>
+                <input type = "number" id = "telefone" name = "telefone" placeholder="Digite seu telefone">
+            </div>
+            <div class="textfield">
+                <label for="Senha">&nbsp Crie sua senha:</label>
+                <input type = "password" id = "senha" name = "senha" placeholder="Crie sua senha">
+            </div>
+
+
+                <!--Cria o botao para avançar-->
+                <button class="btn-login" onclick="window.open('../HTML/login.html')">Cadastrar</button>
+        </div>
+        </div>
+    </div>
+</div>
+</body>
