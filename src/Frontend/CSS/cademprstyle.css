@@ -78,7 +78,7 @@ body{
     /* Seta as propriedades da classe textfield, em especifico das labels*/
   color: black;
   margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 15px;
   }
 
   .btn-login{
