@@ -58,23 +58,23 @@
         //faz a insercao dos dados no banco de dados
         insert(){
             //pega os dados no html
-            var cnpj = document.getElementById("cnpj").value;
-            var email = document.getElementById("email");
-            var telefone = document.getElementById("telefone");
-            var senha = document.getElementById("senha");
-            var nomefantasia = document.getElementbyId("nomefantasia")
-            var razaosocial = document.getElementbyId("razsoc")
+            var varcnpj = document.getElementById("cnpj").value;
+            var varemail = document.getElementById("email");
+            var vartelefone = document.getElementById("telefone");
+            var varsenha = document.getElementById("senha");
+            var varnomefantasia = document.getElementbyId("nomefantasia")
+            var varrazaosocial = document.getElementbyId("razsoc")
             //usa o ajax
             $.ajax({
                 type: "POST", 
                 url: hostname + "/registrarEmpreiteiro",
                 data: {
-                    cnpj: cnpj,
-                    email: email,
-                    telefone: telefone,
-                    senha: senha,
-                    razaoSocial: razaosocial,
-                    nomeFantasia: nomefantasia
+                    cnpj: varcnpj,
+                    email: varemail,
+                    telefone: vartelefone,
+                    senha: varsenha,
+                    razaoSocial: varrazaosocial,
+                    nomeFantasia: varnomefantasia
 
                 },
                 }).done(function(){
