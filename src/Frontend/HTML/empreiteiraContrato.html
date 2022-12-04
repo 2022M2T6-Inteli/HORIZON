@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/contratos.css">
     <script src="https://kit.fontawesome.com/f5b8112d40.js" crossorigin="anonymous"></script>
     <script src="../JS/chamadosMobile.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <title>Contratos</title>
 </head>
+
 <body>
     <!-- Divisoria da barra de navegação.  -->
     <nav>
@@ -20,7 +23,8 @@
             <img src="../IMG/barramenu.png" width="50px" height="50px">
         </label>
         <!-- Imagem contendo o logo da MRV.  -->
-        <a href="/public/HTML/paginaObras.html"><label class="logo"><img src="../IMG/logoMRV_nova.png" width="162px" height="70px" alt="Logo Mrv"></label></a>
+        <a href="/public/HTML/paginaObras.html"><label class="logo"><img src="../IMG/logoMRV_nova.png" width="162px"
+                    height="70px" alt="Logo Mrv"></label></a>
         <ul>
             <!-- Listas de opções do menu.  -->
             <li><a class="" href="../HTML/pagina.html">Dados da Empresa</a></li>
@@ -51,13 +55,13 @@
                         </tr>
                     </thead>
                     <tbody id="tabelaContratos">
-        
+
                     </tbody>
                 </table>
             </div>
-                    
-                        <!-- Linhas da Tabela.  -->
-                    <!--<tr style="height: auto">
+
+            <!-- Linhas da Tabela.  -->
+            <!--<tr style="height: auto">
                         <th scope="row">1</th>
                         <td>7 Meses</td>
                         <td>Avenida Nossa Senhora da Assunção</td>
@@ -76,15 +80,16 @@
         </div><!-- Fim da tabela.  -->
     </section>
     <script>
+        //Função que carrega os contratos da empreiteira
         $(document).ready(() => {
             contratos.list();
         });
-        let contador = 0;
+        let contador = 0;//Variável que controla a quantidade de contratos
         // objeto que faz o get
         var contratos = {
 
             list() {
-                $.ajax({
+                $.ajax({//Função que faz o get
                     url: '/readContrato',
                     type: 'GET',
                     success: data => {
@@ -106,4 +111,5 @@
 
     </script>
 </body>
+
 </html>

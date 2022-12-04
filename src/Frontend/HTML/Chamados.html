@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chamados</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="../CSS/Chamados.css">
     <script src="https://kit.fontawesome.com/f5b8112d40.js" crossorigin="anonymous"></script>
     <script src="../JS/chamadosMobile.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
+
 <body>
     <nav>
         <!-- Icone que compacta as operações de navegação.  -->
@@ -19,7 +22,8 @@
             <img src="../IMG/barramenu.png" width="50px" height="50px">
         </label>
         <!-- Imagem contendo o logo da MRV.  -->
-        <a href="/public/HTML/paginaObras.html"><label class="logo"><img src="../IMG/logoMRV_nova.png" width="162px" height="70px" alt="Logo Mrv"></label></a>
+        <a href="/public/HTML/paginaObras.html"><label class="logo"><img src="../IMG/logoMRV_nova.png" width="162px"
+                    height="70px" alt="Logo Mrv"></label></a>
         <ul>
             <!-- Listas de opções do menu.  -->
             <li><a class="" href="../HTML/pagina.html">Dados da Empresa</a></li>
@@ -33,9 +37,11 @@
         <div class="table">
             <!-- Header da Tabela.  -->
             <div class="texto">
-                <img src="../IMG/file_verde-removebg-preview.png" width="55px" height="50px" alt="Chamados" class="file">
+                <img src="../IMG/file_verde-removebg-preview.png" width="55px" height="50px" alt="Chamados"
+                    class="file">
                 <h3 class="titulo">Acompanhar Chamado</h3>
-                <a href="../HTML/novoChamado.html"><button type="button" class="link" id="acompanhar" name="acompanhar">Novo Chamado</button></a>
+                <a href="../HTML/novoChamado.html"><button type="button" class="link" id="acompanhar"
+                        name="acompanhar">Novo Chamado</button></a>
             </div>
             <hr class="espaco">
             <!-- Body da Tabela.  -->
@@ -123,19 +129,20 @@
         </div>
     </section>
     <script>
+        //Função para pegar os dados do banco de dados e colocar na tabela
         $(document).ready(() => {
             users.list();
         });
-        let contador = 0;
+        let contador = 0;//Variavel para contar quantos chamados foram abertos
         // objeto que faz o get
         var users = {
 
-            list() {
+            list() {//Função para pegar os dados do banco de dados
                 $.ajax({
                     url: '/readChamado',
                     type: 'GET',
                     success: data => {
-                        
+
                         var tr = '';
                         data.forEach(element => {
                             contador += 1;
@@ -154,4 +161,5 @@
 
     </script>
 </body>
+
 </html>
