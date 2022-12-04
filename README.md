@@ -74,7 +74,7 @@ Isso instalará todas as dependências definidas no arquivo <b>package.json</b> 
 ```sh
 node .\backendscript.js
 ```
-5. Agora você pode acessar a aplicação através do link http://localhost:3022/
+5. Agora você pode acessar a aplicação através do link http://localhost:3022/public
 6. O servidor está online.
 
 
