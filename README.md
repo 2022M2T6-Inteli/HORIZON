@@ -10,7 +10,7 @@
 
 ## Integrantes: 
 - <a href="https://www.linkedin.com/in/arthur-tsukamoto/">Arthur Tsukamoto</a>
-- <a href="https://www.linkedin.com/in/estherhikari/">Esther Hikari Nunes</a>
+- <a href="https://www.linkedin.com/in/estherhikari/">Esther Hikari Kimura Nunes</a>
 - <a href="https://www.linkedin.com/in/felipe-zillo-72b367247/overlay/photo/">Felipe Zillo</a> 
 - <a href="https://www.linkedin.com/in/jos%C3%A9-vitor-marcelino-4165ba24a/">Vitor Marcelino</a> 
 - <a href="https://www.linkedin.com/in/luis-miranda-137566139/">Luis Miranda</a>
