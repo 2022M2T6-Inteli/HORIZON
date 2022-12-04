@@ -92,13 +92,15 @@ deve possuir o valor "node app.js".
 ````
 
 ## 🗃 Histórico de lançamentos
-
+* 0.1.2 - 02/12/2022
+    * Trabalho em andamento - Artefato 4
+    * Entraga da Integração
 * 0.1.1 - 18/11/2022
     * Trabalho em andamento - Artefato 3
     * Entrega do Frontend
 * 0.1.0 - 03/11/2022
     * Trabalho em andamento - Artefato 2
-    * Entrega do backend
+    * Entrega do Backend
 * 0.0.1 - 20/10/2022
     * Trabalho em andamento - Artefato 1
 
