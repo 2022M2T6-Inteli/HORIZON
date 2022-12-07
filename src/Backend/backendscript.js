@@ -110,7 +110,7 @@ app.get("/deleteChamado", urlencodedParser, (req, res) => { //Deleta uma obra do
 		if (err) {
 			throw err;
 		}
-		res.write('<p>CHAMADO DELETADO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+		res.write('<p>CHAMADO DELETADO COM SUCESSO!</p><a href="/public/HTML/Chamados.html">VOLTAR</a>');
 		res.end();
 	});
 	db.close(); // Fecha o banco
