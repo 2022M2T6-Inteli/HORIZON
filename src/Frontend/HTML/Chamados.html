@@ -53,6 +53,7 @@
                             <th scope="col">Aberto</th>
                             <th scope="col">Título de chamado</th>
                             <th scope="col">Descriçao Resumida</th>
+                            <th scope="col">DELETAR</th>
                         </tr>
                     </thead>
                     <tbody id="tabelona">
@@ -85,9 +86,10 @@
                             tr += `<tr>`;
                             tr += `<th scope="row"> ${contador} </th>`;
                             tr += `<th scope="row"> ${element.data} </th>`;
-                            tr += `<td scope="row"> ${element.titulo} </td>`
-                            tr += `<td scope="row"> ${element.descricao} </td>`
-                            tr += `</tr>`
+                            tr += `<td scope="row"> ${element.titulo} </td>`;
+                            tr += `<td scope="row"> ${element.descricao} </td>`;
+                            tr += `<td scope="row"><a color='#04844b' href="/deleteChamado?cod_chamados=${element.cod_chamados}">DELETAR</a></td>`;
+                            tr += `</tr>`;
                         });
                         $('#tabelona').html(tr);
                     }
