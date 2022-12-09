@@ -52,6 +52,7 @@
                             <th scope="col">Data início</th>
                             <th scope="col">Localização</th>
                             <th scope="col">Funcionários</th>
+                            <th scope="col">DELETAR</th>
                         </tr>
                     </thead>
                     <tbody id="tabelaContratos">
@@ -60,24 +61,7 @@
                 </table>
             </div>
 
-            <!-- Linhas da Tabela.  -->
-            <!--<tr style="height: auto">
-                        <th scope="row">1</th>
-                        <td>7 Meses</td>
-                        <td>Avenida Nossa Senhora da Assunção</td>
-                        <td>12</td>
-                        <td>0</td>
-                        <td>Aberto</td>
-                    </tr>
-                    <tr style="height: auto">
-                        <th scope="row">2</th>
-                        <td>1 ano e 8 Meses</td>
-                        <td>Avenida Raimundo Pereira de Magalhães, 2350 Jardim Três</td>
-                        <td>7</td>
-                        <td>2</td>
-                        <td>Aberto</td>
-                    </tr>-->
-        </div><!-- Fim da tabela.  -->
+           </div><!-- Fim da tabela.  -->
     </section>
     <script>
         //Função que carrega os contratos ativos
@@ -101,7 +85,8 @@
                             tr += `<th scope="row"> ${element.data} </th>`;
                             tr += `<td scope="row"> ${element.endereco} </td>`
                             tr += `<td scope="row"> ${element.funcionario} </td>`
-                            tr += `</tr>`
+                            tr += `<td scope="row"><a color='#04844b' href="/deleteContrato?cod_contratos=${element.cod_contratos}">DELETAR</a></td>`;
+                            tr += `</tr>`;
                         });
                         $('#tabelaContratos').html(tr);
                     }

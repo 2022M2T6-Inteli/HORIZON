@@ -56,6 +56,7 @@
                             <th scope="col">Serviços</th>
                             <th scope="col">Vagas</th>
                             <th scope="col">Descrição</th>
+                            <th scope="col">DELETAR</th>
                         </tr>
                     </thead>
                     <tbody id="tabelaObras">
@@ -89,7 +90,8 @@
                             tr += `<td scope="row"> ${element.setor_requisitado} </td>`;
                             tr += `<td scope="row"> ${element.vagas_requeridas} </td>`;
                             tr += `<td scope="row"> ${element.descricao} </td>`;
-                            tr += `</tr>`
+                            tr += `<td scope="row"><a color='#04844b' href="/deleteObras?cod_cadastro_obra=${element.cod_cadastro_obra}">DELETAR</a></td>`;
+                            tr += `</tr>`;
                         });
                         $('#tabelaObras').html(tr);
                     }

@@ -291,7 +291,7 @@ app.get("/deleteContrato", urlencodedParser, (req, res) => { //Deleta uma obra d
 		if (err) {
 			throw err;
 		}
-		res.write('<p>CONTRATO DELETADO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+		res.write('<p>CONTRATO DELETADO COM SUCESSO!</p><a href="/public/HTML/contratos.html">VOLTAR</a>');
 		res.end();
 	});
 	db.close(); // Fecha o banco
@@ -1013,7 +1013,7 @@ app.get("/deleteObras", urlencodedParser, (req, res) => { //Deleta uma obra do b
 		if (err) {
 			throw err;
 		}
-		res.write('<p>OBRA REMOVIDA COM SUCESSO!</p><a href="/">VOLTAR</a>');
+		res.write('<p>OBRA REMOVIDA COM SUCESSO!</p><a href="/public/HTML/historicoObras.html">VOLTAR</a>');
 		res.end();
 	});
 	db.close(); // Fecha o banco
