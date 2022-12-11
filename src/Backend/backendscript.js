@@ -10,7 +10,7 @@ var data = horario.getHours()
 var status 
 
 const hostname = '127.0.0.1';// endereço
-const port = 3022;// porta do site
+const port = 3021;// porta do site
 const app = express();// app faz o manuseio do express
 
 app.use("/public", express.static(path.join(__dirname, "../Frontend"), {
@@ -24,6 +24,25 @@ app.use("/public", express.static(path.join(__dirname, "../Frontend"), {
 
 /* Definição dos endpoints */
 app.use(express.json());
+
+/*
+========================================================================================
+//           			       Rotas de redireção					                   //
+//                                de páginas                                          //
+========================================================================================
+*/
+
+app.get('/',function(req,res){
+	// On getting the home route request,
+	// the user will be redirected to GFG website
+	res.redirect('/public');
+  });
+
+  app.get('/voltaChamados',function(req,res){
+	// On getting the home route request,
+	// the user will be redirected to GFG website
+	res.redirect('/public/HTML/Chamados.html');
+  });
 
 //get, post, put, delete methods
 /*
@@ -60,7 +79,7 @@ app.post('/registrarChamado', urlencodedParser, (req, res) => {
 			throw err;
 		}
 	});
-	res.write('<p>CHAMADO INSERIDO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	res.redirect('/voltaChamados');
 	db.close(); // Fecha o banco
 	res.end();
 });
@@ -94,7 +113,7 @@ app.post('/atualizaChamado', urlencodedParser, (req, res) => {
 		}
 		res.end();
 	});
-	res.write('<p>CHAMADO ATUALIZADO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	res.redirect('/voltaChamados');
 	db.close(); // Fecha o banco
 });
 
@@ -110,7 +129,7 @@ app.get("/deleteChamado", urlencodedParser, (req, res) => { //Deleta uma obra do
 		if (err) {
 			throw err;
 		}
-		res.write('<p>CHAMADO DELETADO COM SUCESSO!</p><a href="/public/HTML/Chamados.html">VOLTAR</a>');
+		res.redirect('/voltaChamados');
 		res.end();
 	});
 	db.close(); // Fecha o banco
