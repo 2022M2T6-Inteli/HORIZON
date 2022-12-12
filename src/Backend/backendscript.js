@@ -10,7 +10,7 @@ var data = horario.getHours()
 var status
 
 const hostname = '127.0.0.1';// endereço
-const port = 3021;// porta do site
+const port = 3025;// porta do site
 const app = express();// app faz o manuseio do express
 
 app.use("/public", express.static(path.join(__dirname, "../Frontend"), {
@@ -53,6 +53,10 @@ app.get('/voltaObras', function (req, res) {
 	res.redirect('/public/HTML/historicoObras.html');
 });
 
+app.get('/voltaDadosEmpresa', function (req, res) {
+	// A pagina será direcionada para url correspondente
+	res.redirect('/public/HTML/pagina.html');
+});
 
 //get, post, put, delete methods
 /*
@@ -361,7 +365,7 @@ app.post('/registrarDados', urlencodedParser, (req, res) => {
 			throw err;
 		}
 	});
-	res.write('<p>DADOS INSERIDOS COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	res.redirect('/voltaDadosEmpresa');
 	db.close(); // Fecha o banco
 	res.end();
 });
@@ -386,7 +390,7 @@ app.get('/atualizaDados', (req, res) => {
 app.post('/atualizaDados', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
-	sql = "UPDATE DadosPrincipais SET cnpj='" + req.body.cnpj + "', razaoSocial = '" + req.body.razaoSocial + "' , nomeFantasia='" + req.body.nomeFantasia + "' , departamento='" + req.body.departamento + "' WHERE codDadosPrincipais='" + req.body.codDadosPrincipais + "'";
+	sql = "UPDATE DadosPrincipais SET cnpj='" + req.body.cnpj + "', razaoSocial = '" + req.body.razaoSocial + "' , nomeFantasia='" + req.body.nomeFantasia + "' , departamento='" + req.body.departamento + "' WHERE codDadosPrincipais='" + req.query.codDadosPrincipais + "'";
 	console.log(sql);
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [], err => {
@@ -395,7 +399,7 @@ app.post('/atualizaDados', urlencodedParser, (req, res) => {
 		}
 		res.end();
 	});
-	res.write('<p>DADOS ATUALIZADOS COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	res.redirect('/voltaDadosEmpresa');
 	db.close(); // Fecha o banco
 });
 
@@ -411,7 +415,7 @@ app.get("/deleteDados", urlencodedParser, (req, res) => { //Deleta uma obra do b
 		if (err) {
 			throw err;
 		}
-		res.write('<p>DADOS DELETADOS COM SUCESSO!</p><a href="/">VOLTAR</a>');
+		res.redirect('/voltaDadosEmpresa');
 		res.end();
 	});
 	db.close(); // Fecha o banco
