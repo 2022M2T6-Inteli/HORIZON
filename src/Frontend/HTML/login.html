@@ -20,24 +20,26 @@
                 <!--Cria o titulo principal da pagina-->
                 <h1>Login</h1>
                 <!--Cria as classes responsaveis pelo input/labels do usuario e senha-->
-                <div class="textfield">
-                    <label for="usuario">&nbsp CNPJ</label>
-                    <input type="text" name="usuario" placeholder="Digite seu CNPJ">
-                </div>
-                <div class="textfield">
-                    <label for="senha">&nbsp Senha</label>
-                    <input type="password" name="senha" placeholder="Digite sua senha">
-                </div>
+                <form action="/public/HTML/paginaObras.html">
+                    <div class="textfield">
+                        <label for="usuario">&nbsp CNPJ</label>
+                        <input type="text" name="usuario" placeholder="Digite seu CNPJ">
+                    </div>
+                    <div class="textfield">
+                        <label for="senha">&nbsp Senha</label>
+                        <input type="password" name="senha" placeholder="Digite sua senha">
+                    </div>
 
-                <!--cria o botao de login-->
-                <a href="/public/HTML/paginaObras.html"><button class="btn-login">ENTRAR</button></a>
+                    <!--cria o botao de login-->
+                    <button class="btn-login">ENTRAR</button>
+                </form>
                 <div class="opcoes">
                     <!--cria a opção de checkbox para manter-se logado e de recuperar a senha-->
                     <input type="checkbox" /> <span> Mantenha-me contectado </span>
-                    <span class="cadastro"> <a href="../HTML/cadastro-empreiteiro.html" target="_blank "
+                    <span class="cadastro"> <a href="../HTML/cadastro-empreiteiro.html"
                             rel="noopener noreferrer">Criar conta</a></span>
                     <br>
-                    <span class="esqueci"> <a href="../HTML/esquecisenha.html" target="_blank "
+                    <span class="esqueci"> <a href="../HTML/esquecisenha.html"
                             rel="noopener noreferrer">Esqueceu a Senha?</a></span>
                     <br>
                 </div>

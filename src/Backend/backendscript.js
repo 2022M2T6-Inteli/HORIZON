@@ -10,7 +10,7 @@ var data = horario.getHours()
 var status
 
 const hostname = '127.0.0.1';// endereço
-const port = 3025;// porta do site
+const port = 1111;// porta do site
 const app = express();// app faz o manuseio do express
 
 app.use("/public", express.static(path.join(__dirname, "../Frontend"), {
@@ -57,6 +57,7 @@ app.get('/voltaDadosEmpresa', function (req, res) {
 	// A pagina será direcionada para url correspondente
 	res.redirect('/public/HTML/pagina.html');
 });
+
 
 //get, post, put, delete methods
 /*
@@ -358,14 +359,14 @@ app.post('/registrarDados', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
-	sql = "INSERT INTO DadosPrincipais (cnpj, razaoSocial, nomeFantasia, departamento) VALUES ('" + req.body.cnpj + "', '" + req.body.razaoSocial + "', '" + req.body.nomeFantasia + "', '" + req.body.departamento + "')";
+	sql = "INSERT INTO DadosPrincipais (cnpj, razaoSocial, nomeFantasia, departamento, senha, email) VALUES ('" + req.body.cnpj + "', '" + req.body.razaoSocial + "', '" + req.body.nomeFantasia + "', '" + req.body.departamento + "', '" + req.body.senha + "', '" + req.body.email + "')";
 	console.log(sql);
 	db.run(sql, [], err => {
 		if (err) {
 			throw err;
 		}
 	});
-	res.redirect('/voltaDadosEmpresa');
+	res.redirect('/public/HTML/login.html');
 	db.close(); // Fecha o banco
 	res.end();
 });
@@ -390,7 +391,7 @@ app.get('/atualizaDados', (req, res) => {
 app.post('/atualizaDados', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
-	sql = "UPDATE DadosPrincipais SET cnpj='" + req.body.cnpj + "', razaoSocial = '" + req.body.razaoSocial + "' , nomeFantasia='" + req.body.nomeFantasia + "' , departamento='" + req.body.departamento + "' WHERE codDadosPrincipais='" + req.query.codDadosPrincipais + "'";
+	sql = "UPDATE DadosPrincipais SET cnpj='" + req.body.cnpj + "', razaoSocial = '" + req.body.razaoSocial + "' , nomeFantasia='" + req.body.nomeFantasia + "' , departamento='" + req.body.departamento + "', email = '" + req.body.email + "' WHERE codDadosPrincipais='" + req.query.codDadosPrincipais + "'";
 	console.log(sql);
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [], err => {
