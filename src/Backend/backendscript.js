@@ -39,10 +39,20 @@ app.get('/', function (req, res) {
 });
 
 app.get('/voltaChamados', function (req, res) {
-	// On getting the home route request,
-	// the user will be redirected to GFG website
+	// A pagina será direcionada para url correspondente
 	res.redirect('/public/HTML/Chamados.html');
 });
+
+app.get('/voltaContratos', function (req, res) {
+	// A pagina será direcionada para url correspondente
+	res.redirect('/public/HTML/contratos.html');
+});
+
+app.get('/voltaObras', function (req, res) {
+	// A pagina será direcionada para url correspondente
+	res.redirect('/public/HTML/historicoObras.html');
+});
+
 
 //get, post, put, delete methods
 /*
@@ -260,7 +270,7 @@ app.post('/registrarContrato', urlencodedParser, (req, res) => {
 			throw err;
 		}
 	});
-	res.write('<p>CONTRATO INSERIDO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	res.redirect('/voltaContratos');
 	db.close(); // Fecha o banco
 	res.end();
 });
@@ -294,7 +304,7 @@ app.post('/atualizaContrato', urlencodedParser, (req, res) => {
 		}
 		res.end();
 	});
-	res.write('<p>CONTRATO ATUALIZADO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	res.redirect('/voltaContratos');
 	db.close(); // Fecha o banco
 });
 
@@ -310,7 +320,7 @@ app.get("/deleteContrato", urlencodedParser, (req, res) => { //Deleta uma obra d
 		if (err) {
 			throw err;
 		}
-		res.write('<p>CONTRATO DELETADO COM SUCESSO!</p><a href="/public/HTML/contratos.html">VOLTAR</a>');
+		res.redirect('/voltaContratos');
 		res.end();
 	});
 	db.close(); // Fecha o banco
@@ -982,7 +992,7 @@ app.post('/registrarObras', urlencodedParser, (req, res) => {
 			throw err;
 		}
 	});
-	res.write('<p>OBRA INSERIDA COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	res.redirect('/voltaObras');
 	db.close(); // Fecha o banco
 	res.end();
 });
@@ -1016,7 +1026,7 @@ app.post('/atualizaObras', urlencodedParser, (req, res) => {
 		}
 		res.end();
 	});
-	res.write('<p>OBRA ATUALIZADO COM SUCESSO!</p><a href="/">VOLTAR</a>');
+	res.redirect('/voltaObras');
 	db.close(); // Fecha o banco
 });
 
@@ -1032,7 +1042,7 @@ app.get("/deleteObras", urlencodedParser, (req, res) => { //Deleta uma obra do b
 		if (err) {
 			throw err;
 		}
-		res.write('<p>OBRA REMOVIDA COM SUCESSO!</p><a href="/public/HTML/historicoObras.html">VOLTAR</a>');
+		res.redirect('/voltaObras');
 		res.end();
 	});
 	db.close(); // Fecha o banco
