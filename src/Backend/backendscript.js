@@ -3,23 +3,23 @@ const express = require('express'); // framework express
 const bodyParser = require('body-parser');
 const urlencodedParser = bodyParser.urlencoded({ extended: false })
 const sqlite3 = require('sqlite3').verbose();
-const DBPATH = "Teste1.db"
-const DBSOURCE = "Teste1.db"
+const DBPATH = "MRV.db"
+const DBSOURCE = "MRV.db"
 var horario = new Date
 var data = horario.getHours()
-var status 
+var status
 
 const hostname = '127.0.0.1';// endereço
 const port = 3021;// porta do site
 const app = express();// app faz o manuseio do express
 
 app.use("/public", express.static(path.join(__dirname, "../Frontend"), {
-    // Aqui estamos configurando o cache dos arquivos estáticos... Muito
-    // útil em ambientes de produção, mas deve-se ter cuidado durante a
-    // fase de desenvolvimento.
-    cacheControl: true,
-    etag: false,
-    maxAge: "30d"
+	// Aqui estamos configurando o cache dos arquivos estáticos... Muito
+	// útil em ambientes de produção, mas deve-se ter cuidado durante a
+	// fase de desenvolvimento.
+	cacheControl: true,
+	etag: false,
+	maxAge: "30d"
 }));
 
 /* Definição dos endpoints */
@@ -32,17 +32,17 @@ app.use(express.json());
 ========================================================================================
 */
 
-app.get('/',function(req,res){
+app.get('/', function (req, res) {
 	// On getting the home route request,
 	// the user will be redirected to GFG website
 	res.redirect('/public');
-  });
+});
 
-  app.get('/voltaChamados',function(req,res){
+app.get('/voltaChamados', function (req, res) {
 	// On getting the home route request,
 	// the user will be redirected to GFG website
 	res.redirect('/public/HTML/Chamados.html');
-  });
+});
 
 //get, post, put, delete methods
 /*

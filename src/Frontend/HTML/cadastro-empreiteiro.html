@@ -54,7 +54,6 @@
         </div>
     </div>
     <script>
-        var hostname = '127.0.0.1:3011';
 
         var empreiteiro = {
             //faz a insercao dos dados no banco de dados
@@ -69,7 +68,7 @@
                 //usa o ajax
                 $.ajax({//faz a requisicao
                     type: "POST",
-                    url: hostname + "/registrarEmpreiteiro",
+                    url: "/registrarEmpreiteiro",
                     data: {
                         cnpj: varcnpj,
                         email: varemail,
