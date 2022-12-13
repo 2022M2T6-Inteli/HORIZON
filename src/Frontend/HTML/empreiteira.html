@@ -83,7 +83,7 @@
                             tr += `<td scope="row"> ${element.nomeFantasia} </td>`;
                             tr += `<td scope="row"> ${element.cnpj} </td>`;
                             tr += `<th scope="row"> ${element.email} </th>`;
-                            tr += `<td scope="row"><a color='#04844b' href="/deleteEmpreiteira?codDadosPrincipais=${element.cod_cadastro_obra}">DELETAR</a></td>`;
+                            tr += `<td scope="row"><a color='#04844b' href="/deleteEmpreiteira?codDadosPrincipais=${element.codDadosPrincipais}">DELETAR</a></td>`;
                             tr += `</tr>`;
                         });
                         $('#tabelaEmpreiteira').html(tr);
