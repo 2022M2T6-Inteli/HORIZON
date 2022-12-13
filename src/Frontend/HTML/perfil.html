@@ -62,8 +62,11 @@
     </div>
     <script>
         const urlContratos = "/readContrato";
+        const urlDados = "/readDados";
+        const divNome = document.getElementById("meio");
         const divContratos = document.getElementById("quantContratos");
         let contratos;
+        let saidaNome = '';
         let saida = 0;
 
         fetch(urlContratos)
@@ -76,7 +79,23 @@
                     saida += 1;
                 });
                 divContratos.innerHTML = saida;
+            });
+
+        fetch(urlDados)
+            .then((response) => {
+                return response.json();
             })
+            .then((data) => {
+                nome = data;
+                nome.map(function (nome) {
+                    if(`${nome.codDadosPrincipais}` == 1){
+                        saidaNome += '<img src="../IMG/perfil.png" class="fotoCircular"><h1>' + `${nome.nomeFantasia}` + '</h1>'
+                    }
+                });
+                divNome.innerHTML = saidaNome;
+            });
+
+
     </script>
 </body>
 

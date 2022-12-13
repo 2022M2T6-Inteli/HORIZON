@@ -20,70 +20,29 @@
             <div class="card-login">
                 <h1>Cadastro</h1>
                 <br>
-                <!--Cria a classe para inserir o CNPJ ou CPF e dados para cadastro-->
-                <div class="textfield">
-                    <label for="usuario">&nbsp CNPJ/CPF:</label>
-                    <input type="number" id="cnpj" name="usuario" placeholder="Digite seu CNPJ/CPF">
-                </div>
-                <div class="textfield">
+                <form name="form" method="post" action="/registrarDados" class="textfield">
+                    <label for="usuario">&nbsp CNPJ:</label>
+                    <input type="number" id="cnpj" name="cnpj" placeholder="Digite seu CNPJ">
+
                     <label for="email">&nbsp E-mail:</label>
                     <input type="text" id="email" name="email" placeholder="Digite seu E-mail">
-                </div>
-                <div class="textfield">
-                    <label for="telefone">&nbsp Telefone:</label>
-                    <input type="number" id="telefone" name="telefone" placeholder="Digite seu telefone">
-                </div>
-                <div class="textfield">
+
                     <label for="NomeFantasia">&nbsp Nome Fantasia:</label>
-                    <input type="text" id="nomefantasia" name="nomefantasia" placeholder="Digite seu nome fantasia">
-                </div>
-                <div class="textfield">
-                    <label for="NomeFantasia">&nbsp Razao Social:</label>
-                    <input type="text" id="razsoc" name="razsoc" placeholder="Digite sua razao social">
-                </div>
-                <div class="textfield">
+                    <input type="text" id="nomeFantasia" name="nomeFantasia" placeholder="Digite seu nome fantasia">
+
+                    <label for="RazaoSocial">&nbsp Razao Social:</label>
+                    <input type="text" id="razaoSocial" name="razaoSocial" placeholder="Digite sua razao social">
+
+                    <label for="departamento">&nbsp Razao Social:</label>
+                    <input type="text" id="departamento" name="departamento" placeholder="Digite seu departamento">
+
                     <label for="Senha">&nbsp Crie sua senha:</label>
                     <input type="password" id="senha" name="senha" placeholder="Crie sua senha">
-                </div>
 
-
-
-                <!--Cria o botao para avançar-->
-                <button class="btn-login" onclick="window.open('../HTML/login.html')">Cadastrar</button>
+                    <!--Cria o botao para avançar-->
+                    <button class="btn-login">Cadastrar</button>
+                </form>
             </div>
         </div>
-    </div>
-    <script>
-
-        var empreiteiro = {
-            //faz a insercao dos dados no banco de dados
-            insert() {
-                //pega os dados no html
-                var varcnpj = document.getElementById("cnpj").value;
-                var varemail = document.getElementById("email");
-                var vartelefone = document.getElementById("telefone");
-                var varsenha = document.getElementById("senha");
-                var varnomefantasia = document.getElementbyId("nomefantasia")
-                var varrazaosocial = document.getElementbyId("razsoc")
-                //usa o ajax
-                $.ajax({//faz a requisicao
-                    type: "POST",
-                    url: "/registrarEmpreiteiro",
-                    data: {
-                        cnpj: varcnpj,
-                        email: varemail,
-                        telefone: vartelefone,
-                        senha: varsenha,
-                        razaoSocial: varrazaosocial,
-                        nomeFantasia: varnomefantasia
-
-                    },
-                }).done(function () {
-                    alert("Suas informações foram registradas!");
-                });
-
-            }
-        }
-    </script>
     </div>
 </body>

@@ -21,7 +21,7 @@
                 <h1>Atualize os dados da empresa</h1>
                 <br>
                 <!--Cria a classe para inserir o CNPJ ou CPF e dados para cadastro-->
-                <form name="formdados" method="post" action="/registrarDados" class="textfield">
+                <form name="formdados" method="post" action="/atualizaDados?codDadosPrincipais=1" class="textfield">
                     <label for="razaoSocial">&nbsp Razão Social</label>
                     <input type="text" name="razaoSocial" placeholder="Exemplo: Crachá">
 
@@ -31,8 +31,6 @@
                     <label for="cnpj">&nbsp CNPJ</label>
                     <input type="number" name="cnpj" placeholder="Descrição do Chamado">
 
-
-
                     <label for="email">&nbsp Email</label>
                     <input type="text" name="email" placeholder="Exemplo: Crachá">
 
@@ -41,11 +39,13 @@
 
                     <!--Cria o botao para atualizar-->
 
-                    <button class="btn-login" onclick="window.open('public/HTML/pagina.html')">ATUALIZAR</button>
+                    <button class="btn-login">ATUALIZAR</button>
 
                 </form>
 
             </div>
         </div>
     </div>
+    <script>
+    </script>
 </body>
