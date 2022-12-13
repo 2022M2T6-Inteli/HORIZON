@@ -422,6 +422,22 @@ app.get("/deleteDados", urlencodedParser, (req, res) => { //Deleta uma obra do b
 	db.close(); // Fecha o banco
 });
 
+app.get("/deleteEmpreiteira", urlencodedParser, (req, res) => { //Deleta uma obra do banco de dados
+	res.statusCode = 200;
+	res.setHeader('Access-Control-Allow-Origin', '*');
+
+	sql = "DELETE FROM DadosPrincipais WHERE codDadosPrincipais='" + req.query.codDadosPrincipais + "'";
+	console.log(sql);
+	var db = new sqlite3.Database(DBSOURCE); // Abre o banco
+	db.run(sql, [], err => {
+		if (err) {
+			throw err;
+		}
+		res.redirect('/public/HTML/empreiteira.html');
+		res.end();
+	});
+	db.close(); // Fecha o banco
+});
 /*
 ========================================================================================
 //                  Endpoints relacionados à tabela Empreiteiro                       //
