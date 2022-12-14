@@ -10,7 +10,7 @@ var data = horario.getHours()
 var status
 
 const hostname = '127.0.0.1';// endereço
-const port = 1112;// porta do site
+const port = 1300;// porta do site
 const app = express();// app faz o manuseio do express
 
 app.use("/public", express.static(path.join(__dirname, "../Frontend"), {
