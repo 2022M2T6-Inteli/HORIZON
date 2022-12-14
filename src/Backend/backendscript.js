@@ -5,9 +5,7 @@ const urlencodedParser = bodyParser.urlencoded({ extended: false })
 const sqlite3 = require('sqlite3').verbose();
 const DBPATH = "MRV.db"
 const DBSOURCE = "MRV.db"
-var horario = new Date
-var data = horario.getHours()
-var status
+
 
 const hostname = '127.0.0.1';// endereço
 const port = 1300;// porta do site
@@ -67,6 +65,12 @@ app.get('/voltaDadosEmpresa', function (req, res) {
 ========================================================================================
 */
 //READ
+
+var horario = new Date
+var data = `Dia ${horario.getDate()}/${horario.getMonth()+1}   às ${horario.getHours()}:${horario.getMinutes()}`
+var status
+
+
 app.get("/readChamado", (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*'); // Isso é importante para evitar o erro de CORS
