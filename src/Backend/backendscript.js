@@ -123,7 +123,7 @@ app.get('/atualizaChamado', (req, res) => {
 app.post('/atualizaChamado', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
-	sql = "UPDATE Chamados SET data='" + req.body.data + "', status = '" + req.body.status + "' , descricao='" + req.body.descricao + "' , titulo='" + req.body.titulo + "' WHERE cod_chamados='" + req.body.cod_chamados + "'";
+	sql = "UPDATE Chamados SET status = '" + req.body.status + "' , descricao='" + req.body.descricao + "' , titulo='" + req.body.titulo + "' WHERE cod_chamados='" + req.query.cod_chamados + "'";
 	console.log(sql);
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [], err => {
@@ -1042,7 +1042,7 @@ app.get('/atualizaObras', (req, res) => {
 app.post('/atualizaObras', urlencodedParser, (req, res) => {
 	res.statusCode = 200;
 	res.setHeader('Access-Control-Allow-Origin', '*');
-	sql = "UPDATE idObras SET nome_obra='" + req.body.nome_obra + "', localizacao = '" + req.body.localizacao + "' , tamanho='" + req.body.tamanho + "' , setor_requisitado='" + req.body.setor_requisitado + "', vagas_requeridas= '" + req.body.vagas_requeridas + "', data_inicio= '" + req.body.data_inicio + "', data_fim= '" + req.body.data_fim + "', descricao= '" + req.body.descricao + "' WHERE cod_cadastro_obra='" + req.body.cod_cadastro_obra + "'";
+	sql = "UPDATE idObras SET nome_obra='" + req.body.nome_obra + "', localizacao = '" + req.body.localizacao + "' , tamanho='" + req.body.tamanho + "' , setor_requisitado='" + req.body.setor_requisitado + "', vagas_requeridas= '" + req.body.vagas_requeridas + "', data_inicio= '" + req.body.data_inicio + "', data_fim= '" + req.body.data_fim + "', descricao= '" + req.body.descricao + "' WHERE cod_cadastro_obra='" + req.query.cod_cadastro_obra + "'";
 	console.log(sql);
 	var db = new sqlite3.Database(DBPATH); // Abre o banco
 	db.run(sql, [], err => {
