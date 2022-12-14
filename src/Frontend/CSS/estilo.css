@@ -222,9 +222,7 @@ h3 {
 
 /*Atributos modificados para telas de até 590px*/
 @media screen and (max-width: 590px) {
-    body {
-        background-color: #a6c743;
-    }
+    
 
     a:hover,
     a.active {
