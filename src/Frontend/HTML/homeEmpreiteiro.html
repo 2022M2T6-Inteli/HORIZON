@@ -161,24 +161,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="../JS/main.js"></script>
-    <script>
-        const urlObras = "/readidObras";
-        const divObras = document.getElementById("obrasRead");
 
-        fetch(urlObras)//faz a requisição
-            .then((response) => {
-                return response.json();
-            })
-            .then((data) => {
-                let saida = '';
-                let obras = data;
-                obras.map(function (obras) {//map é um método que percorre o array
-                    saida += '<div class="row gx-5 gx-lg-6 row-cols-3 row-cols-md-4 row-cols-xl-4 justify-content-center"><div class="col mb-5"><div class="card h-100"><img class="card-img-top" src="..\IMG\predio3.png" alt="..." /><div class="card-body p-4"><div class="text-center"><h5 class="fw-bolder">' + `${obras.nome_obra}` + '</h5>' + `${obras.descricao}` + ' <br>' + `${obras.tamanho}` + '</div></div><div class="card-footer p-4 pt-0 border-top-0 bg-transparent"><div class="text-center"><a class="btn btn-outline-dark mt-auto" href="#">Saiba mais</a></div></div></div></div></div>'
-                    });
-                divObras.innerHTML = saida;
-            })
-
-    </script>
 </body>
 
 </html>
