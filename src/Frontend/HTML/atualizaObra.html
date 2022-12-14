@@ -64,7 +64,7 @@
                         saida += '<form id="formulario" name="form2" method="post" action="/atualizaObras" class="textfield"><label for="usuario">&nbsp Nome da Obra</label><input type="text" name="nome_obra" placeholder="' + `${obras.nome_obra}` + '"><label for="usuario">&nbsp Tamanho</label><input type="text" name="tamanho" placeholder="' + `${obras.tamanho}` + '"><label for="usuario">&nbsp Endereço</label><input type="text" name="localizacao" placeholder="' + `${obras.localizacao}` + '"><label for="usuario">&nbsp Serviços</label><input type="text" name="setor_requisitado" placeholder="' + `${obras.setor_requisitado}` + '"><label for="usuario">&nbsp Vagas</label><input type="text" name="vagas_requeridas" placeholder="' + `${obras.vagas_requeridas}` + '"><label for="usuario">&nbsp Descrição</label><input type="text" name="descricao" placeholder="' + `${obras.descricao}` + '"><!--Cria o botao para avançar--><button class="btn-login">AVANÇAR</button></form>'
 
                     }
-                    });
+                });
                     
                 divObras.innerHTML = saida;
             })
