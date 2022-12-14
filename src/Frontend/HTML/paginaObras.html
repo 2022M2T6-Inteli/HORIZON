@@ -28,7 +28,7 @@
     </header>
 
     <!--INÍCIO BARRA DE PESQUISA-->
-    <div id="barra-de-pesquisa">
+    <div id="barra-de-pesquisa" style="background: url(../IMG/fundo-cidade.jpg) center left no-repeat;">
         <div id="semi-header">
             <span id="frasezinha">Encontre o seu trabalho dos sonhos</span>
             <div id="form">
@@ -95,6 +95,41 @@
             })
 
     </script>
+
+    <script>
+        const img2 = "url(../IMG/fundo-cidade2.jpg) center left no-repeat;"
+        const img3 = "url(../IMG/fundo-cidade3.jpg) center left no-repeat;"
+        var fundo = document.getElementById("#barra-de-pesquisa")
+        let index = 0;
+
+        function carrossel(){
+            index++
+            if (index > 2){
+                index=0
+            }
+    
+            switch(index){
+                case 0:
+                    document.getElementById("barra-de-pesquisa").style= "background: url(../IMG/fundocidade2.jpg) center left no-repeat;";
+                    console.log(index);
+                    break;
+                case 1:
+                    document.getElementById("barra-de-pesquisa").style= "background: url(../IMG/fundo-cidade.jpg) center left no-repeat;";
+                    console.log(index);
+                    break;
+
+                case 2:
+                    document.getElementById("barra-de-pesquisa").style= "background: url(../IMG/fundo3mrv.jpg) center left no-repeat;";
+                    console.log(index);
+                    break;
+            
+            }
+            
+    
+        }
+        setInterval(carrossel,2200)
+    </script>
+
 </body>
 
 </html>
