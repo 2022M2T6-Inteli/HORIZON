@@ -18,7 +18,7 @@
     <!-- HEADER -->
     <nav class="navbar navbar-expand-lg bg-success sticky-top">
         <div class="container">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="/public/HTML/paginaObras.html">
                 <img src="..\IMG\logoMRV_nova.png" width="150px" height="145px">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -46,7 +46,7 @@
 
         <!-- Área com os dados da obra-->
         <section class="py-5">
-            <div class="container px-4 px-lg-5 my-5">
+            <div id="obrasRead" class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
                     <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 border border-success border border-4" src="..\IMG\predio3.png" alt="..." /></div>
                     <div class="col-md-6">
@@ -73,6 +73,28 @@
     <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="../JS/main.js"></script>
+    <script>
+        const urlObras = "/readidObras";
+        const divObras = document.getElementById("obrasRead");
+        let idObra = +window.location.search.replace('?', '');
+        fetch(urlObras)//faz a requisição
+            .then((response) => {
+                return response.json();
+            })
+            .then((data) => {
+                let saida = '';
+                let obras = data;
+                obras.map(function (obras) {//map é um método que percorre o array
+                    if(obras.cod_cadastro_obra == idObra){
+                        saida += '<div class="row gx-4 gx-lg-5 align-items-center"><div class="col-md-6"><img class="card-img-top mb-5 mb-md-0 border border-success border border-4" src="/public/IMG/predio3.png" alt="..." /></div><div class="col-md-6"><div class="small mb-1">' + `${obras.setor_requisitado}` + '</div><h1 class="display-5 fw-bolder">' + `${obras.nome_obra}` + '</h1><span>' + `${obras.tamanho}` + 'm²</span><p class="lead">' + `${obras.descricao}` + '</p><div class="d-flex"><button class="btn btn-outline-success flex-shrink-0" type="button">    Candidate-se    </button></div></div></div>'
+                        console.log(obras.nome_obra);
+                        console.log(obras.cod_cadastro_obra);
+                    }
+                });
+                    
+                divObras.innerHTML = saida;
+            })
+    </script>
 </body>
 
 </html>
