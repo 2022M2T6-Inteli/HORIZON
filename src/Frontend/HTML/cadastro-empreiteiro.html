@@ -22,7 +22,7 @@
                 <br>
                 <form name="form" method="post" action="/registrarDados" class="textfield">
                     <label for="usuario">&nbsp CNPJ:</label>
-                    <input type="number" id="cnpj" name="cnpj" placeholder="Digite seu CNPJ">
+                    <input type="text" id="cnpj" name="cnpj" placeholder="Digite seu CNPJ" onblur="mascara()">
 
                     <label for="email">&nbsp E-mail:</label>
                     <input type="text" id="email" name="email" placeholder="Digite seu E-mail">
@@ -33,8 +33,8 @@
                     <label for="RazaoSocial">&nbsp Razao Social:</label>
                     <input type="text" id="razaoSocial" name="razaoSocial" placeholder="Digite sua razao social">
 
-                    <label for="departamento">&nbsp Razao Social:</label>
-                    <input type="text" id="departamento" name="departamento" placeholder="Digite seu departamento">
+                    <label for="servicos">&nbsp Serviços:</label>
+                    <input type="text" id="servicos" name="servicos" placeholder="Digite seu departamento">
 
                     <label for="Senha">&nbsp Crie sua senha:</label>
                     <input type="password" id="senha" name="senha" placeholder="Crie sua senha">
@@ -45,4 +45,25 @@
             </div>
         </div>
     </div>
+
+    <script>
+        
+        function mascara() {    
+            var input = String(document.getElementById('cnpj').value)
+            console.log(input)
+            if (input.length == 14){
+                //console.log(aa.slice(0,3), aa.slice(3,6), aa.slice(6,9), aa.slice(9,11))
+                let p1 = input.slice(0,2)
+                let p2 = input.slice(2,5)
+                let p3 = input.slice(5,8)
+                let p4 = input.slice(8,12)
+                let p5 = input.slice(12,14)
+                let cpfpronto = p1.concat(".",p2,".",p3,"/",p4, "-",p5)
+                document.getElementById('cnpj').value = cpfpronto
+                console.log(cpfpronto)
+                
+        }
+    }
+    
+    </script>
 </body>
