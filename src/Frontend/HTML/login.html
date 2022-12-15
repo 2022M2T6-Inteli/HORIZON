@@ -24,7 +24,7 @@
 					<div class="caixaGrupo">
 					</div>
 					<div class="caixa">
-						<input type="text" placeholder="CNPJ" class="form-control">
+						<input type="text" placeholder="CNPJ" class="form-control" id="cnpj" onblur="mascara()">
 					</div>
                     <BR></BR>
 					<div class="caixa">
@@ -38,5 +38,23 @@
 			</div>
 		</div>
 		
+		<script>
+		function mascara() {    
+            var input = String(document.getElementById('cnpj').value)
+            console.log(input)
+            if (input.length == 14){
+                //console.log(aa.slice(0,3), aa.slice(3,6), aa.slice(6,9), aa.slice(9,11))
+                let p1 = input.slice(0,2)
+                let p2 = input.slice(2,5)
+                let p3 = input.slice(5,8)
+                let p4 = input.slice(8,12)
+                let p5 = input.slice(12,14)
+                let cpfpronto = p1.concat(".",p2,".",p3,"/",p4, "-",p5)
+                document.getElementById('cnpj').value = cpfpronto
+                console.log(cpfpronto)
+                
+        }
+    }
+	</script>
 	</body>
 </html>
