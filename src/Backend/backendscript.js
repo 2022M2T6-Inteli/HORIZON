@@ -36,6 +36,12 @@ app.get('/', function (req, res) {
 	res.redirect('/public');
 });
 
+app.get('/principal', function (req, res) {
+	// On getting the home route request,
+	// the user will be redirected to GFG website
+	res.redirect('/public/HTML/paginaObras.html');
+});
+
 app.get('/voltaChamados', function (req, res) {
 	// A pagina será direcionada para url correspondente
 	res.redirect('/public/HTML/Chamados.html');
@@ -370,7 +376,7 @@ app.post('/registrarDados', urlencodedParser, (req, res) => {
 			throw err;
 		}
 	});
-	res.redirect('/public/HTML/login.html');
+	res.redirect('/principal');
 	db.close(); // Fecha o banco
 	res.end();
 });
