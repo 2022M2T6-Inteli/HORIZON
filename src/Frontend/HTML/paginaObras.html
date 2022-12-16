@@ -229,36 +229,7 @@
     
     </script>
 
-<script>
-    let index = 0;
 
-    function carrossel(){
-        index++
-        if (index > 2){
-            index=0
-        }
-
-        switch(index){
-            case 0:
-                document.getElementById("home").style= "background: linear-gradient(rgba(var(--cor-principal-rgb), 0.507), rgba(var(--cor-principal-rgb), 0.438)), url(../IMG/fundocidade2.jpg);";
-                console.log(index);
-                break;
-            case 1:
-                document.getElementById("home").style= "background: linear-gradient(rgba(var(--cor-principal-rgb), 0.507), rgba(var(--cor-principal-rgb), 0.438)), url(../IMG/fundo-cidade.jpg);";
-                console.log(index);
-                break;
-
-            case 2:
-                document.getElementById("home").style= "background: linear-gradient(rgba(var(--cor-principal-rgb), 0.507), rgba(var(--cor-principal-rgb), 0.438)), url(../IMG/fundo3mrv.jpg);";
-                console.log(index);
-                break;
-
-        }
-
-
-    }
-    setInterval(carrossel,2200)
-</script>
 
 
 </body>
