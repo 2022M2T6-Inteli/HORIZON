@@ -63,14 +63,14 @@
     justify-content: flex-end;
 }
 
+
 /*Seletor universal de todos os elementos do HTML*/
 * {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
-    box-sizing: border-box;
-    font-family: fontepadrao;
+
 }
 
 /*Definição dos atributos no corpo da página*/
@@ -296,9 +296,14 @@ a.active,a:hover{
 }
 
 /*Atributos modificados, especificos para telas de até 400px*/
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 420px) {
     .checkBtn {
         display: block;
+    }
+
+    #atualizetitulo {
+        height: 100%;
+        color: #ffa500;
     }
 
     ul{
