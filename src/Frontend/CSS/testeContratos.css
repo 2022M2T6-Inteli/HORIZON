@@ -3,7 +3,7 @@
     font-family: fontepadrao;
     src: url(../Fontes/Fontes/Primária/Averta.woff)
 }
-
+/*definir margens*/
 .grid {
     margin: 10%;
     padding: 32px;
@@ -12,7 +12,7 @@
     border-radius: 10px;
     font-family: fontepadrao;
 }
-
+/*definir cor dos hiperlinks*/
 .texto .link {
     background-color: #04844b;
     color: white;
@@ -20,8 +20,7 @@
     height: 7vh;
 }
 
-
-
+/*definir cor e tipografia dos diferentes tipos de texto (hiperlinks, título e textos*/
 .titulo {
     color: #04844b;
     margin: 10px;

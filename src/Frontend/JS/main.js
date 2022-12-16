@@ -1,12 +1,12 @@
 
 AOS.init({
-  // Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-  offset: 120, // offset (in px) from the original trigger point
-  delay: 0, // values from 0 to 3000, with step 50ms
-  duration: 900, // values from 0 to 3000, with step 50ms
-  easing: 'ease', // default easing for AOS animations
-  once: false, // whether animation should happen only once - while scrolling down
-  mirror: false, // whether elements should animate out while scrolling past them
-  anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
+  // Configurações dos atributos 'data-aos'  Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
+  offset: 120, // deslocamento em pixels da offset da imagem inicial
+  delay: 0, // delay entre os valores de 0 a 3000, values from 0 to 3000, com tempo de 50ms
+  duration: 900, // delay entre os valores de 0 a 3000, values from 0 to 3000, com tempo de 50ms
+  easing: 'ease', // animações AOS padrão
+  once: false, // Se a animação deveria apenas acontecer uma vez - quando rola a tela pra baixo
+  mirror: false, // Se a animação deveria acontecer quando o usuário passa por elas
+  anchorPlacement: 'top-bottom', // define qual posição em relação a página deve ativar a animação
 
 });
