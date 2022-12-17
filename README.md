@@ -83,7 +83,7 @@ Link da aplicação WEB: https://0c9qk2-1330.preview.csb.app/public/
 ````
 
 ## 🗃 Histórico de lançamentos
-* 0.1.2 - 16/12/2022
+* 0.1.3 - 16/12/2022
     * Trabalho concluído - Artefato 5
     * Entrega da código finalizado
 * 0.1.2 - 02/12/2022
