@@ -37,8 +37,6 @@ Faça o mesmo para a documentação em formato DOCX.
 
 |--> documentos<br>
   &emsp;| --> outros <br>
-  &emsp;| T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.pdf<br>
-  &emsp;| T(NUMERO_DA_TURMA)_G(NUMERO_DO_GRUPO)_V(VERSÃO)_Web_application_document.docx<br>
 |--> imagens<br>
 |--> src<br>
   &emsp;|--> Backend<br>
@@ -79,8 +77,9 @@ npm start
 
 
 ```
-Link da aplicação WEB: https://0c9qk2-1330.preview.csb.app/public/
+Aplicação online feita pelo codesandbox: 
 ````
+https://0c9qk2-1330.preview.csb.app/public/
 
 ## 🗃 Histórico de lançamentos
 * 0.1.3 - 16/12/2022
