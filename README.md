@@ -17,10 +17,6 @@
 - <a href="https://www.linkedin.com/in/marcelo-saadi-pessini-003212209/">Marcelo Saadi Pessini</a> 
 - <a href="https://www.linkedin.com/in/mariana-g%C3%B6rresen-b03059210/">Mariana Brasil Görresen</a>
 
-## 📝 Descrição
-
-Curta descrição sobre o que o seu projeto faz (problema a ser resolvido e solução proposta).
-
 ## 📁 Estrutura de pastas
 
 |--> documentos<br>
